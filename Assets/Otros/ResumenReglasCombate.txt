@@ -1,0 +1,17 @@
+Estadisticas:
+Vida: 100
+Energia: 10
+
+Ataques:
+Ataque Pesado: 5, 0.5, 40 - 60
+Ataque Random: 3, 0.2, 20 - 60
+Ataque Ligero: 3, 0.7, 20 - 30
+Ataque Pesimo: 2, 0.5, 10 - 20 	
+
+Genes:
+Improvisador (Seleccion de ataques eleatorios)
+Adaptable (Seleccion de otro ataque si no hay energia)
+
+Optimista (Tiene en cuenta solo los valores maximos de impacto)
+Pesimista (Tiene en cuenta solo los valores minimos)
+Analitico (Tiene en cuenta la media ponderada con el fallo)
