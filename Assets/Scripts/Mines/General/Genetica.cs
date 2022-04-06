@@ -23,7 +23,7 @@ public static class Genetica
             for (int i = 0; i < madre.Count; i++)
             {
                 float margen = Mathf.Max(madre[i], padre[i]) / MARGEN;
-                float valor = Random.Range(Mathf.Min(madre[i], padre[i]) - margen, Mathf.Max(madre[i], padre[i]) + margen);
+                float valor = Mathf.Clamp(Random.Range(Mathf.Min(madre[i], padre[i]) - margen, Mathf.Max(madre[i], padre[i]) + margen), Poblacion.minGenetic, Poblacion.maxGenetic);
                 hijo.Add(valor);
             }
 
@@ -43,7 +43,7 @@ public static class Genetica
         }
         margen = max / MARGEN;
 
-        sujeto[Random.Range(0, sujeto.Count)] = Random.Range(min - margen, max + margen);
+        sujeto[Random.Range(0, sujeto.Count)] = Mathf.Clamp(Random.Range(min - margen, max + margen), Poblacion.minGenetic, Poblacion.maxGenetic);
         return sujeto;
     }
 }
