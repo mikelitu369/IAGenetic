@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Entrenador
 {
-    public static int entrenamientos = 10000;
+    public static int entrenamientos = 1000;
 
     public static float Entrenamiento(List<float> genes)
     {
@@ -21,7 +21,7 @@ public static class Entrenador
 
     static bool Combate(Individuo pupilo)
     {
-        int vidaPupilo = 100, vidaDummy = 100;
+        int vidaPupilo = 200, vidaDummy = 200;
         int energiaPupilo = 10, energiaDummy = 10;
 
         bool pupiloTurn = true;

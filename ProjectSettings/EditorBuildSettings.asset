@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PvETest.unity
+    guid: bf5b8f42c2d17e348b0941761a42e5e5
   m_configObjects: {}

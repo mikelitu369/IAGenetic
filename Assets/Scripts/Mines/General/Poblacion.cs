@@ -122,6 +122,10 @@ public abstract class Poblacion : MonoBehaviour
         string genesString = "[" + poblacion[0].genes[0].ToString("F0") + ", " + poblacion[0].genes[1].ToString("F0") + ", " + poblacion[0].genes[2].ToString("F0") + ", " + poblacion[0].genes[3].ToString("F0") + ", " + poblacion[0].genes[4].ToString("F0") + "]";
         print("Generacion: " + generacion + "  ||  MejorCandidato: " + (100 - ((poblacion[0].fitnes * 100) / Entrenador.entrenamientos)) + "%  ||  Tiempo: " + (Time.time - timeStart).ToString("F2") + " || " + genesString);
 
+        Conclusion();
+
         if (poblacion[0].fitnes > fitnesObjetive) StartCoroutine(Generacion());
     }
+
+    public virtual void Conclusion() { }
 }

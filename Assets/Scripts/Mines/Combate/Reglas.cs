@@ -31,7 +31,7 @@ public static class Reglas
         {
             case ataques.pesado: return 5;
             case ataques.random: return 3;
-            case ataques.ligero: return 3;
+            case ataques.ligero: return 2;
             case ataques.pesimo: return 2;
             default: return 0;
         }
@@ -53,10 +53,10 @@ public static class Reglas
     {
         switch (ataque)
         {
-            case ataques.pesado: return 45;
-            case ataques.random: return 22;
-            case ataques.ligero: return 22;
-            case ataques.pesimo: return 11;
+            case ataques.pesado: return 50;
+            case ataques.random: return 12;
+            case ataques.ligero: return 26;
+            case ataques.pesimo: return 12;
             default: return 0;
         }
     }
@@ -65,35 +65,35 @@ public static class Reglas
     {
         switch (ataque)
         {
-            case ataques.pesado: return 30;
-            case ataques.random: return 17;
-            case ataques.ligero: return 33;
-            case ataques.pesimo: return 20;
+            case ataques.pesado: return 18;
+            case ataques.random: return 21;
+            case ataques.ligero: return 43;
+            case ataques.pesimo: return 18;
             default: return 0;
         }
     }
 
     static int AtaquePesado()
     {
-        if (Random.Range(0, 1) > 0.5f) return 0;
+        if (Random.Range(0f, 1f) > 0.5f) return 0;
         else return Random.Range(40, 61);
     }
 
     static int AtaqueRandom()
     {
-        if (Random.Range(0, 1) > 0.2f) return 0;
+        if (Random.Range(0f, 1f) > 0.2f) return 0;
         else return Random.Range(20, 61);
     }
 
     static int AtaqueLigero()
     {
-        if (Random.Range(0, 1) > 0.7f) return 0;
+        if (Random.Range(0f, 1f) > 0.7f) return 0;
         else return Random.Range(20, 31);
     }
 
     static int AtaquePesimo()
     {
-        if (Random.Range(0, 1) > 0.5f) return 0;
+        if (Random.Range(0f, 1f) > 0.5f) return 0;
         else return Random.Range(10, 21);
-    }
+    }    
 }

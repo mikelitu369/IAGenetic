@@ -491,7 +491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &297259944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
   - {fileID: 661007603}
   - {fileID: 82058853}
   - {fileID: 297259943}
-  obstaculosRandom: 0
+  obstaculosRandom: 1
 --- !u!4 &628444109
 Transform:
   m_ObjectHideFlags: 0
@@ -1489,8 +1489,8 @@ MonoBehaviour:
   poblacionInicial: 40
   numeroDescendencia: 2
   probabilidadMutacion: 10
-  minValueGenetic: -100
-  maxValueGenetic: 100
+  minValueGenetic: -3000
+  maxValueGenetic: 3000
   timeScale: 10
   fitnesObjetive: 0.5
   bullet: {fileID: 2515069625326811247, guid: 7f7eb1aa7f87bd54daa83bb04a05bf92, type: 3}
