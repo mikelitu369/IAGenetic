@@ -13,13 +13,13 @@ public static class Entrenador
 
         for (int i = 0; i < entrenamientos; i++)
         {
-            if (!Combate(pupilo)) ++derrotas;
+            if (!Combate(pupilo, (personalidades)Random.Range(0,8))) ++derrotas;
         }
 
         return derrotas;
     }
 
-    static bool Combate(Individuo pupilo)
+    static bool Combate(Individuo pupilo, personalidades dummy)
     {
         int vidaPupilo = 200, vidaDummy = 200;
         int energiaPupilo = 10, energiaDummy = 10;
@@ -33,14 +33,22 @@ public static class Entrenador
                 Reglas.ataques ataque = pupilo.SeleccionarAtaque(energiaPupilo);
 
                 if (ataque == Reglas.ataques.descanso) energiaPupilo = 10;
-                else vidaDummy -= Reglas.Atacar(ataque);
+                else
+                {
+                    vidaDummy -= Reglas.Atacar(ataque);
+                    energiaPupilo -= Reglas.Coste(ataque);
+                }
             }
             else
             {
-                Reglas.ataques ataque = (Reglas.ataques)Random.Range(0, 4);
+                Reglas.ataques ataque = Dummys.Atacar(dummy, energiaDummy);
 
                 if (Reglas.Coste(ataque) > energiaDummy || ataque == Reglas.ataques.descanso) energiaDummy = 10;
-                else vidaPupilo -= Reglas.Atacar(ataque);
+                else
+                {
+                    vidaPupilo -= Reglas.Atacar(ataque);
+                    energiaDummy -= Reglas.Coste(ataque);
+                }
             }
             pupiloTurn = !pupiloTurn;
         }

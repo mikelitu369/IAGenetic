@@ -19,7 +19,7 @@ public class Individuo
     {
         if(Random.Range(0,100) < improvisador) return (Reglas.ataques) Random.Range(0, 4);
 
-        int[] opciones = new int[4];
+        float[] opciones = new float[4];
 
         for (int i = 0; i < 4; i++)
         {
@@ -28,8 +28,8 @@ public class Individuo
                             Reglas.EvaluacionAnalitica((Reglas.ataques)i) * (int)analitico;
         }
 
-        List<int> opcionesSinOrdenar = new List<int>(opciones);
-        List<int> opcionesOrdenadas = new List<int>(opciones);
+        List<float> opcionesSinOrdenar = new List<float>(opciones);
+        List<float> opcionesOrdenadas = new List<float>(opciones);
         opcionesOrdenadas.Sort();
 
         for (int i = 3; i >= 0; i--)
