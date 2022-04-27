@@ -28,6 +28,7 @@ public static class Entrenador
 
         while (vidaPupilo > 0 && vidaDummy > 0)
         {
+            
             if (pupiloTurn)
             {
                 Reglas.ataques ataque = pupilo.SeleccionarAtaque(energiaPupilo);
@@ -52,7 +53,7 @@ public static class Entrenador
             }
             pupiloTurn = !pupiloTurn;
         }
-
+      
         if (vidaPupilo <= 0) return false;
         else return true;
     }

@@ -8,6 +8,7 @@ public static class Dummys
     {
         Reglas.ataques ataque = Reglas.ataques.descanso;
         List<float> probabilidades = new List<float>();
+      
         switch (personalidad)
         {
             case personalidades.aleatorio:
@@ -71,13 +72,13 @@ public static class Dummys
                 probabilidades.Add((Reglas.EvaluacionOptimista(Reglas.ataques.pesimo) + Reglas.Evaluacionpesimista(Reglas.ataques.pesimo) + Reglas.EvaluacionAnalitica(Reglas.ataques.pesimo)) / 3);
                 break;            
         }
-
+        
         int dado = Random.Range(0, 100);
         int ataqueI = 0;
         for (int i = 0; i < dado; i++)
         {
-            Debug.Log(ataqueI);
-            Debug.Log(probabilidades[ataqueI]);
+            //Debug.Log(ataqueI);
+            //Debug.Log(probabilidades[ataqueI]);
             if (probabilidades[ataqueI] < 0) ++ataqueI;
             --probabilidades[ataqueI];
         }

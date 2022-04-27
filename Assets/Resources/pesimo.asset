@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e7d641844eeaf544affc75d2abba233, type: 3}
   m_Name: pesimo
   m_EditorClassIdentifier: 
-  coste: 0
-  minDmg: 0
-  maxDmg: 0
-  pre: 0
+  coste: 2
+  minDmg: 10
+  maxDmg: 20
+  pre: 0.5

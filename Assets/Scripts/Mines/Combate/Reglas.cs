@@ -49,7 +49,7 @@ public static class Reglas
         Charge();
 
         float divisor = pesado.Optimista() + random.Optimista() + ligero.Optimista() + pesimo.Optimista();
-        divisor /= 100;
+        divisor /= 100f;
 
         switch (ataque)
         {
@@ -66,7 +66,7 @@ public static class Reglas
         Charge();
 
         float divisor = pesado.Pesimista() + random.Pesimista() + ligero.Pesimista() + pesimo.Pesimista();
-        divisor /= 100;
+        divisor /= 100f;
 
         switch (ataque)
         {
@@ -83,7 +83,7 @@ public static class Reglas
         Charge();
 
         float divisor = pesado.Analitico() + random.Analitico() + ligero.Analitico() + pesimo.Analitico();
-        divisor /= 100;
+        divisor /= 100f;
 
         switch (ataque)
         {
